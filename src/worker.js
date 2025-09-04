@@ -14,6 +14,8 @@ class Worker
         this.queueDirProc  = path.join(queueDir, 'proc');
         this.queueDirError = path.join(queueDir, 'error');
 
+        this.testeDirs();
+
         this.defaults = Object.assign({}, {
             queue_error                 : null,
             error_tentativas_qtd        : 1,
@@ -174,6 +176,20 @@ class Worker
         for (var i = 0; i < arquivos.length; i++) {
             fs.utimesSync(path.join(this.queueDirIn, arquivos[i]), agora, agora);
         }        
+    }
+
+    testeDirs() {
+        if (!fs.existsSync(this.queueDirIn)) {
+            fs.mkdirSync(this.queueDirIn, { recursive: true });
+        }
+
+        if (!fs.existsSync(this.queueDirProc)) {
+            fs.mkdirSync(this.queueDirProc, { recursive: true });
+        }
+
+        if (!fs.existsSync(this.queueDirError)) {
+            fs.mkdirSync(this.queueDirError, { recursive: true });
+        }
     }
 }
 

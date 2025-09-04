@@ -4,7 +4,7 @@
     "description": "Park Queue",
     "scripts": {
         "dev": "node local.js",
-        "build": "pkg . --targets node16-win-x64"
+        "build": "pkg ."
     },
     "keywords": [
         "netforce",
@@ -22,5 +22,9 @@
         "sae-framework": "^0.20.8",
         "axios": "^0.27.2",
         "dotenv": "^16.0.3"
+    },
+    "pkg": {
+        "targets": ["node16-win-x64","node16-linux-x64"],
+        "outputPath" : "dist"
     }
 }

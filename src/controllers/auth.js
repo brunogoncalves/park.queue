@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // Carregar tokens
 var arquivoTokens = path.join(process.cwd(), 'tokens.json');
-const tokens = JSON.parse(fs.readFileSync(arquivoTokens, { encoding: "utf8" }));
+const tokens = fs.existsSync(arquivoTokens) ? JSON.parse(fs.readFileSync(arquivoTokens, { encoding: "utf8" })) : {};
 
 module.exports = (app) => {
     // Atribuir o APP no auth
