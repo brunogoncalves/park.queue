@@ -1,0 +1,26 @@
+.env
+/dist
+/*.exe
+
+# Gestores de pacotes
+/vendor
+/db/vendor_db
+composer.lock
+/node_modules
+package.lock
+package-lock.json
+
+# Editores
+/.vscode
+/.idea
+
+#Test
+/test
+
+# Compilados
+*.zip
+
+# Locais
+/tokens.js
+/queues/exemple.json
+/queues/error/*.json

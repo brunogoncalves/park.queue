@@ -1,0 +1,26 @@
+{
+    "name": "park_queue",
+    "version": "0.1.1",
+    "description": "Park Queue",
+    "scripts": {
+        "dev": "node local.js",
+        "build": "pkg . --targets node16-win-x64"
+    },
+    "keywords": [
+        "netforce",
+        "queue",
+        "jobs"
+    ],
+    "contributors": [
+        "Bruno Gonçalves"
+    ],
+    "bin": "local.js",
+    "license": "MIT",
+    "dependencies": {
+        "rhinojs": "^1.8.22",
+        "uuid": "^11.1.0",
+        "sae-framework": "^0.20.8",
+        "axios": "^0.27.2",
+        "dotenv": "^16.0.3"
+    }
+}
